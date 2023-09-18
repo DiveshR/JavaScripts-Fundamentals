@@ -1,6 +1,6 @@
 "use strict"; //act all code as newer version
 
-// Primitive Datatypes
+// Primitive Datatypes (7)
 // number => 1, 
 // bigint,
 // string => ""
@@ -9,12 +9,25 @@
 // undefined
 // Symbol => unique
 
+const year=2023
+const isBoolean = false
+const emptyVar = null
+let user
+
+const id = Symbol('123')
+const newId = Symbol('123')
+
+console.log(id === newId)
+
+// https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
 // NOTE: Primitive Datatypes are immutable(Value can not be changed). Everytime any method  is applied new variable is created 
 let newString = "JAVASCRIPT"
-newString.toLowerCase()
 console.log(newString) 
 
 //Non Primitive Data Types
+//objects,array,function
 // Object  => An object is a collection of properties and has a single prototype object. The prototype may be null.
 // NOTE: Objects,array are mutable
 
@@ -96,6 +109,44 @@ console.log("////////////////// ForceFull Conversion ///////////////////////////
 console.log(Number("100")) //100
 console.log(Boolean("")) //false
 console.log(Boolean([])) //true
+
+
+
+////////////////////////////////////////
+// Alogrithms in JS
+// Object to Primitive value
+/**
+ * 1.prefer-string
+ * 2.prefer-number
+ * 3.no-preference
+ */
+
+//toString
+//valueOf
+
+let colorValue = 14
+let binaryValue = colorValue.toString(2)
+console.log(binaryValue) 
+
+console.log({0: 'Zero'}.toString())
+
+console.log(+true)
+
+console.log("2">1)
+console.log("02" > 1)
+
+console.log(null > 0) //false
+console.log(null == 0) //false
+console.log(null >= 0) //true
+
+console.log(undefined > 0) //false
+console.log(undefined == 0) //false
+console.log(undefined >= 0) //false
+
+// ===
+
+console.log("100" === 100); //false
+
 
 
 
