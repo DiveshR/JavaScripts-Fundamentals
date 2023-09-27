@@ -45,10 +45,10 @@ console.log(userObject)
 //Constructor -- Singleton
 
 const singleTon = new Object()
-console.log(singleTon)
+console.log(singleTon) //{}
 
 const  lateralObject = {}
-console.log(lateralObject)
+console.log(lateralObject) //{}
 
 singleTon.name = "Steve"
 singleTon.age = 30
@@ -81,3 +81,37 @@ console.log({evenNumber,oddNumber})  //{
 
 console.log(Object.assign(evenNumber,oddNumber))
 console.log(Object.assign({},evenNumber,oddNumber))
+
+//Alternate Method --mostly used --Spread Operator
+console.log({...evenNumber,...oddNumber})
+
+//fetch array object data 
+const users = [
+    {
+        name: "Adam",
+        email:"admin@gmail.com",
+        age:20
+    },
+    {
+        name: "Martin",
+        email:"martin@gmail.com",
+        age:33
+    },
+    {
+        name: "John",
+        email:"john@gmail.com",
+        age:22
+    },
+]
+console.log(users[0].name)
+console.log(Object.keys(userObject)) //[ 'name', 'full name', 'age', 'isLoggedIn', 'lastLogin' ]
+console.log(Object.values(userObject))
+console.log(Object.entries(userObject)) //   [
+//     [ 'name', 'John' ],
+//     [ 'full name', 'John Deo' ],
+//     [ 'age', 30 ],
+//     [ 'isLoggedIn', true ],
+//     [ 'lastLogin', [ 'Sat', 'Sun' ] ]
+//   ]
+const hasKey = userObject.hasOwnProperty('age') 
+console.log(hasKey) //tru
