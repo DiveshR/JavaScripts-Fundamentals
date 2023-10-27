@@ -1,5 +1,62 @@
 //Promises
 
+var ans  = new Promise((res,rej)=> {
+    if(false){
+        return res();
+    }else{
+        return rej();
+    }
+})
+
+ans.then(function() {
+    console.log('Code is Resolved')
+}).catch(function() {
+    console.log('Code is Rejected')
+})
+
+
+// Take No from 0 to 9 and Resolve is no is less than 5 else Reject
+
+var ans = new Promise((res,rej) => {
+    var no = Math.floor(Math.random()*10)
+    if(no <  5)
+    {
+        return res()
+    }else{
+        return rej()
+    }
+})
+
+ans.then(function(){
+    console.log('No is Resolved')
+}).catch(function(){
+    console.log('No is Rejected');
+})
+
+
+
+// Take No from 0 to 9 and Resolve is no is less than 5 else Reject
+
+var ans = new Promise((res,rej) => {
+    var no = Math.floor(Math.random()*10)
+    if(no <  5)
+    {
+        return res(no)
+    }else{
+        return rej(no)
+    }
+})
+
+ans.then(function(data){
+    console.log(`No:${data} is Resolved`)
+}).catch(function(data){
+    console.log(`No:${data} is Rejected`);
+})
+
+
+//1,2,3,4,5
+
+
 let answer = new Promise((res,rej) => {
     return res("1")
 })
@@ -35,5 +92,7 @@ let four = three.then(function(data){
 four.then(function(data){
     console.log(data)
 })
+
+
 
 
