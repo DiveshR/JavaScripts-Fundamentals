@@ -1,0 +1,39 @@
+//Promises
+
+let answer = new Promise((res,rej) => {
+    return res("1")
+})
+
+let one  = answer.then(function(data){
+    console.log(data)
+    return new Promise((res,rej) =>{
+        return res("2")
+    })
+})
+
+let two = one.then(function(data){
+    console.log(data)
+    return new Promise((res,rej) => {
+        return res("3")
+    })
+})
+
+let three = two.then(function(data){
+    console.log(data)
+    return new Promise((res,rej) => {
+        return res("4")
+    })
+})
+
+let four = three.then(function(data){
+    console.log(data)
+    return new Promise((res,rej) => {
+        return res("5")
+    })
+})
+
+four.then(function(data){
+    console.log(data)
+})
+
+
